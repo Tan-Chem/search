@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Well - Услуги в области образования</title>
+  <link rel="stylesheet" href="css/recet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.js"></script>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Montserrat:wght@200;500;600;800&display=swap"
+    rel="stylesheet">
+
+  <icon>
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#1e4356" />
+    <meta name="msapplication-TileColor" content="#1e4356" />
+    <meta name="theme-color" content="#1e4356" />
+  </icon>
+
+
+
+<body style="margin: 0 !important;">
+
+  <!-- Header/home start-->
+  <div class="header">
+    <img class="header__logo" src="./svg/logo.svg" />
+    <div class="form">
+      <form action="form__seach">
+        <div class="search-wrapper" style="margin-left: 10%; width: 89%;">
+          <input type="text" class="search-input" placeholder="Поиск учреждений">
+          <img class="search_icon1" src="../well__search/svg/search_icon.svg" alt="">
+        </div>
+      </form>
+    </div>
+    <div class="header__account">
+      <div class="got"></div>
+      <button class="deafult__input btn" style="width: 126px; padding-left: 25px; padding-right: 25px;">Войти</button>
+      <button class="like">
+        <img class="header__like btn" src="./svg/like.svg" alt="like" />
+      </button>
+      <select class="select__language" name="" id="">
+        <option value="">RU</option>
+        <option value="">EN</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="controls-wrapper">
+    <div class="controls">
+      <button class="button__search" style="margin-left: 52px; margin-right: 2px;"><  Фильтры</button>
+      <button class="button__search" style="margin-left: 0 !important;">Сбросить</button>
+      <button class="location-btn" style="margin-right: 2px;"><img src="../well__search/svg/location.svg" alt=""></button>
+      <div class="search-wrapper">
+        <input type="text" class="search-input" placeholder="Поиск заведений">
+        <img class="search_icon1" src="../well__search/svg/search_icon.svg" alt="">
+      </div>
+      <div class="filter-dropdown">
+        <button class="deafult__input btn">Рейтинг</button>
+        <div class="filter-menu">
+          <button class="filter-option">Больше отзывов</button>
+          <div class="horizontal-line"></div>
+          <button class="filter-option">Расстояние до метро</button>
+        </div>
+      </div>
+      <img style="cursor: pointer; padding: 3px;" src="../well__search/svg/11.svg" alt="Вставка 1" class="insert">
+      <img style="cursor: pointer; padding: 3px; margin-right: 5%;" src="../well__search/svg/22.svg" alt="Вставка 2" class="insert">
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+      <div class="left-block">
+        <div class="filter">
+          <button class="filter-button">Местоположение <span class="arrow">&#9660;</span></button>
+          <div class="filter-options hidden">
+            <div class="filter-input">
+              <input type="text" placeholder="Введите страну/город">
+              <i class="fa fa-search"></i>
+            </div>
+            <label for="distance-range">Расстояние (км)</label>
+            <div class="distance-range">
+              <input type="range" min="0" max="100" value="50" class="slider" id="">
+              <input type="number" min="0" max="100" value="50" class="number-input">
+            </div>
+          </div>
+        </div>
+        <div class="filter">
+          <button class="filter-button">Фильтр 1 <span class="arrow">&#9660;</span></button>
+          <div class="filter-options hidden">
+            <label><input type="checkbox"> Опция 1 <span class="option-count">(0)</span></label>
+            <label><input type="checkbox"> Опция 2 <span class="option-count">(0)</span></label>
+            <label><input type="checkbox"> Опция 3 <span class="option-count">(0)</span></label>
+          </div>
+        </div>
+        <div class="filter">
+          <button class="filter-button">Фильтр 2 <span class="arrow">&#9661;</span></button>
+          <div class="filter-options hidden">
+            <label><input type="checkbox"> Опция 1 <span class="option-count">(0)</span></label>
+            <label><input type="checkbox"> Опция 2 <span class="option-count">(0)</span></label>
+            <label><input type="checkbox"> Опция 3 <span class="option-count">(0)</span></label>
+          </div>
+        </div>
+        <div class="filter">
+          <button class="filter-button">Фильтр 3 <span class="arrow">&#9662;</span></button>
+          <div class="filter-options hidden">
+            <label><input type="checkbox"> Опция 1 <span class="option-count">(0)</span></label>
+            <label><input type="checkbox"> Опция 2 <span class="option-count">(0)</span></label>
+            <label><input type="checkbox"> Опция 3 <span class="option-count">(0)</span></label>
+          </div>
+        </div>
+        <div class="filter">
+          <button class="filter-button">Фильтр 5 <span class="arrow">&#9663;</span></button>
+          <div class="filter-options hidden">
+            <label><input type="checkbox"> Опция 1 <span class="option-count">(0)</span></label>
+            <label><input type="checkbox"> Опция 2 <span class="option-count">(0)</span></label>
+            <label><input type="checkbox"> Опция 3 <span class="option-count">(0)</span></label>
+          </div>
+        </div>
+        <div class="filter">
+          <button class="filter-button">Фильтр 6 <span class="arrow">&#9664;</span></button>
+          <div class="filter-options hidden">
+            <label><input type="checkbox"> Опция 1 <span class="option-count">(0)</span></label>
+            <label><input type="checkbox"> Опция 2 <span class="option-count">(0)</span></label>
+            <label><input type="checkbox"> Опция 3 <span class="option-count">(0)</span></label>
+          </div>
+        </div>
+  
+        <div class="rating-filter">
+          <button class="filter-button">Рейтинг <span class="arrow">&#9660;</span></button>
+          <div class="filter-options hidden">
+            <label><input type="checkbox"> <span class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span
+                class="rating-count">(0)</span></label>
+            <label><input type="checkbox"> <span class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> <span
+                class="rating-count">(0)</span></label>
+            <label><input type="checkbox"> <span class="rating-stars">&#9733;&#9733;&#9733;&#9734;&#9734;</span> <span
+                class="rating-count">(0)</span></label>
+            <label><input type="checkbox"> <span class="rating-stars">&#9733;&#9733;&#9734;&#9734;&#9734;</span> <span
+                class="rating-count">(0)</span></label>
+            <label><input type="checkbox"> <span class="rating-stars">&#9733;&#9734;&#9734;&#9734;&#9734;</span> <span
+                class="rating-count">(0)</span></label>
+          </div>
+        </div>
+        <div class="filter">
+          <button class="filter-button">Начало обучения<span class="arrow">&#9660;</span></button>
+          <div class="filter-options hidden">
+            <div class="start-date-filter">
+              <select class="day-select">
+                <option value="">День</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <!-- добавить оставшиеся дни месяца -->
+              </select>
+              <select class="month-select">
+                <option value="">Месяц</option>
+                <option value="1">Январь</option>
+                <option value="2">Февраль</option>
+                <!-- добавить оставшиеся месяцы года -->
+              </select>
+              <select class="year-select">
+                <option value="">Год</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <!-- добавить оставшиеся годы -->
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="filter-container">
+          <button class="filter-button">Период обучения <span class="arrow">&#9660;</span></button>
+          <div class="filter-options hidden">
+            <div class="form-row">
+              <label for="start-date">С</label>
+              <div class="form-group">
+                <select class="day-select">
+                  <option value="">День</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <!-- добавить оставшиеся дни месяца -->
+                </select>
+                <select class="month-select">
+                  <option value="">Месяц</option>
+                  <option value="1">Январь</option>
+                  <option value="2">Февраль</option>
+                  <!-- добавить оставшиеся месяцы года -->
+                </select>
+                <select class="year-select">
+                  <option value="">Год</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <!-- добавить оставшиеся годы -->
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <label for="end-date">По</label>
+              <div class="form-group">
+                <select class="day-select">
+                  <option value="">День</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <!-- добавить оставшиеся дни месяца -->
+                </select>
+                <select class="month-select">
+                  <option value="">Месяц</option>
+                  <option value="1">Январь</option>
+                  <option value="2">Февраль</option>
+                  <!-- добавить оставшиеся месяцы года -->
+                </select>
+                <select class="year-select">
+                  <option value="">Год</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <!-- добавить оставшиеся годы -->
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="price-filter">
+          <button class="filter-button">Цена <span class="arrow">&#9660;</span></button>
+          <div class="filter-options hidden">
+            <div class="price-filter-controls">
+              <div class="currency-select">
+                <select id="currency">
+                  <option value="RUB">₽</option>
+                  <option value="USD">$</option>
+                  <option value="EUR">€</option>
+                </select>
+              </div>
+              <div class="price-range">
+                <input type="number" class="price-input" id="price-from" value="0" min="0" max="10000">
+                <span class="price-separator">—</span>
+                <input type="number" class="price-input" id="price-to" value="1000" min="0" max="10000">
+              </div>
+            </div>
+            <div id="price-slider" class="price-slider"></div>
+          </div>
+        </div>
+      </div>
+  
+  
+      <!-- Здесь будет контент правого блока -->
+  
+  
+
+
+      <div class="cards">
+        
+          <div class="card__1 card">
+            <div class="box__cards">
+              <div class="card__image-box">
+                <button class="card__like">
+                  <img src="../well/svg/cardlike.svg" alt="like">
+                </button>
+                <div class="card__mark">
+                  <span class="card__grade">4.8</span>
+                </div>
+              </div>
+              <div class="boxbox">
+                <h2 class="card__font card__location">место</h2>
+                <h2 class="card__name">Название</h2>
+                <div class="card__map__color">
+                  <div class="card__map">
+                    <div class="card__map2">
+                      <h3 class="card__font card__age">Возраст</h3>
+                      <h3 class="card__font2 card__price">10+</h3>
+                    </div>
+                  </div>
+                  <div class="card__map">
+                    <div class="card__map2">
+                      <h3 class="card__font card__age">Стоимость</h3>
+                      <h3 class="card__font2 card__price">5000$</h3>
+                    </div>
+                  </div>
+                  <button type="submit" class="button__search">Подробнее</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card__2 card">
+            <div class="box__cards">
+              <div class="card__image-box">
+                <button class="card__like">
+                  <img src="../well/svg/cardlike.svg" alt="like">
+                </button>
+                <div class="card__mark">
+                  <span class="card__grade">4.8</span>
+                </div>
+              </div>
+              <div class="boxbox">
+                <h2 class="card__font card__location">место</h2>
+                <h2 class="card__name">Название</h2>
+                <div class="card__map__color">
+                  <div class="card__map">
+                    <div class="card__map2">
+                      <h3 class="card__font card__age">Возраст</h3>
+                      <h3 class="card__font2 card__price">10+</h3>
+                    </div>
+                  </div>
+                  <div class="card__map">
+                    <div class="card__map2">
+                      <h3 class="card__font card__age">Стоимость</h3>
+                      <h3 class="card__font2 card__price">5000$</h3>
+                    </div>
+                  </div>
+                  <button type="submit" class="button__search">Подробнее</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card__3 card">
+            <div class="box__cards">
+              <div class="card__image-box">
+                <button class="card__like">
+                  <img src="../well/svg/cardlike.svg" alt="like">
+                </button>
+                <div class="card__mark">
+                  <span class="card__grade">4.8</span>
+                </div>
+              </div>
+              <div class="boxbox">
+                <h2 class="card__font card__location">место</h2>
+                <h2 class="card__name">Название</h2>
+                <div class="card__map__color">
+                  <div class="card__map">
+                    <div class="card__map2">
+                      <h3 class="card__font card__age">Возраст</h3>
+                      <h3 class="card__font2 card__price">10+</h3>
+                    </div>
+                  </div>
+                  <div class="card__map">
+                    <div class="card__map2">
+                      <h3 class="card__font card__age">Стоимость</h3>
+                      <h3 class="card__font2 card__price">5000$</h3>
+                    </div>
+                  </div>
+                  <button type="submit" class="button__search">Подробнее</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        
+          <div class="card__1 card">
+            <div class="box__cards">
+              <div class="card__image-box">
+                <button class="card__like">
+                  <img src="../well/svg/cardlike.svg" alt="like">
+                </button>
+                <div class="card__mark">
+                  <span class="card__grade">4.8</span>
+                </div>
+              </div>
+              <div class="boxbox">
+                <h2 class="card__font card__location">место</h2>
+                <h2 class="card__name">Название</h2>
+                <div class="card__map__color">
+                  <div class="card__map">
+                    <div class="card__map2">
+                      <h3 class="card__font card__age">Возраст</h3>
+                      <h3 class="card__font2 card__price">10+</h3>
+                    </div>
+                  </div>
+                  <div class="card__map">
+                    <div class="card__map2">
+                      <h3 class="card__font card__age">Стоимость</h3>
+                      <h3 class="card__font2 card__price">5000$</h3>
+                    </div>
+                  </div>
+                  <button type="submit" class="button__search">Подробнее</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card__2 card">
+            <div class="box__cards">
+              <div class="card__image-box">
+                <button class="card__like">
+                  <img src="../well/svg/cardlike.svg" alt="like">
+                </button>
+                <div class="card__mark">
+                  <span class="card__grade">4.8</span>
+                </div>
+              </div>
+              <div class="boxbox">
+                <h2 class="card__font card__location">место</h2>
+                <h2 class="card__name">Название</h2>
+                <div class="card__map__color">
+                  <div class="card__map">
+                    <div class="card__map2">
+                      <h3 class="card__font card__age">Возраст</h3>
+                      <h3 class="card__font2 card__price">10+</h3>
+                    </div>
+                  </div>
+                  <div class="card__map">
+                    <div class="card__map2">
+                      <h3 class="card__font card__age">Стоимость</h3>
+                      <h3 class="card__font2 card__price">5000$</h3>
+                    </div>
+                  </div>
+                  <button type="submit" class="button__search">Подробнее</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card__3 card">
+            <div class="box__cards">
+              <div class="card__image-box">
+                <button class="card__like">
+                  <img src="../well/svg/cardlike.svg" alt="like">
+                </button>
+                <div class="card__mark">
+                  <span class="card__grade">4.8</span>
+                </div>
+              </div>
+              <div class="boxbox">
+                <h2 class="card__font card__location">место</h2>
+                <h2 class="card__name">Название</h2>
+                <div class="card__map__color">
+                  <div class="card__map">
+                    <div class="card__map2">
+                      <h3 class="card__font card__age">Возраст</h3>
+                      <h3 class="card__font2 card__price">10+</h3>
+                    </div>
+                  </div>
+                  <div class="card__map">
+                    <div class="card__map2">
+                      <h3 class="card__font card__age">Стоимость</h3>
+                      <h3 class="card__font2 card__price">5000$</h3>
+                    </div>
+                  </div>
+                  <button type="submit" class="button__search">Подробнее</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+  </main>
+
+
+
+  <div>
+    <div class="footer_down">
+      <div class="list">
+        <div class="col__6">
+          <div class="logo__footer">
+            <b class="logo__f" style=" color: #bcbdc8;"> StudyWell</b>
+            <p class="a">All rights reserved studywell.com</p>
+            <p class="a"><a href="#" class="a">Политика конфиденциальности</a></p>
+            <p><a href="#" class="a">Соглашение на обработку персональных данных</a></p>
+          </div>
+        </div>
+        <div class="mnu__footer_clients">
+          <b class="b">Клиентам</b>
+          <ul>
+            <li><a href="#" class="a">Поддержка</a></li>
+            <li><a href="#" class="a">Рекомендации</a></li>
+            <li><a href="#" class="a">Блог</a></li>
+            <li><a href="#" class="a">Вопросы</a></li>
+          </ul>
+        </div>
+
+        <div class="mnu__footer">
+          <b class="b">Партнерам</b>
+          <ul>
+            <li><a class="a" href="#">Реклама</a></li>
+            <li><a class="a" href="#">Партнерство</a></li>
+            <li><a class="a" href="#">Размещение</a></li>
+            <li><a class="a" href="#">Апи</a></li>
+          </ul>
+        </div>
+        <div class="mnu__footer">
+          <b class="b">О нас</b>
+          <ul>
+            <li><a href="#" class="a">Компания</a></li>
+            <li><a href="#" class="a">Правила</a></li>
+            <li><a href="#" class="a">Конфиденциальность</a></li>
+            <li><a href="#" class="a">Пресс центр</a></li>
+          </ul>
+        </div>
+        <div class="mnu__footer__s">
+          <div class="mnu__footer__social">
+            <b class="b">Контакты</b>
+            <ul>
+              <li class="mnu__footer__social"><a href=""><img src="../well/svg/Insta.svg" alt=""></a></li>
+              <li class="mnu__footer__social"><a href=""><img src="../well/svg/twitter 1.svg" alt=""></a></li>
+              <li class="mnu__footer__social"><a href=""><img src="../well/svg/facebook.svg" alt=""></a></li>
+              <li class="mnu__footer__social"><a href=""><img src="../well/svg/whatsapp.svg" alt=""></a></li>
+              <p class="a">+7 (495) 678 09 76</p>
+              <nobr class="a" style="margin-top: 12px; margin-bottom: 0%;">Ул. Самойловская, 26</nobr>
+              <p class="a" style="margin-top: 0;">г. Москва</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../well__search/js/main.js"></script>
+  <script>
+    let expanded = false;
+
+    function showCheckboxes() {
+      const checkboxes = document.getElementById("checkboxes");
+      if (!expanded) {
+        checkboxes.style.display = "block";
+        expanded = true;
+      } else {
+        checkboxes.style.display = "none";
+        expanded = false;
+      }
+    }
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterDropdown = document.querySelector('.filter-dropdown');
+      const filterMenu = document.querySelector('.filter-menu');
+      
+      filterDropdown.addEventListener('mouseenter', () => {
+        filterMenu.style.display = 'flex';
+      });
+      
+      filterDropdown.addEventListener('mouseleave', () => {
+        filterMenu.style.display = 'none';
+      });
+    });
+  </script>
+
+
+</body>
+
+
+</html>
